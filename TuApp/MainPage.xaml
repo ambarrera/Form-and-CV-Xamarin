@@ -1,0 +1,77 @@
+﻿<? xml version = "1.0" encoding = "utf-8" ? >
+    <ContentPage xmlns = "http://xamarin.com/schemas/2014/forms"
+    xmlns:x = "http://schemas.microsoft.com/winfx/2009/xaml"
+    x : Class = "TuApp.MainPage"
+    BackgroundColor = "RoyalBlue">
+ <StackLayout Padding = "20">
+    <Label Text = "Formulario de CV" FontSize = "Large" HorizontalOptions = "Center" TextColor = "White" / >
+
+    <Entry Placeholder = "Nombre" x:Name = "entryNombre" Margin = "0,10,0,0" / >
+    <Entry Placeholder = "Apellido" x:Name = "entryApellido" / >
+
+    <DatePicker x : Name = "datePickerFechaNacimiento" Format = "dd/MM/yyyy" / >
+
+    <Entry Placeholder = "Ocupación" x:Name = "entryOcupacion" / >
+
+    <Entry Placeholder = "Teléfono" x:Name = "entryTelefono" / >
+    <Entry Placeholder = "Email" x:Name = "entryEmail" / >
+
+    <Picker Title = "Nacionalidad" x:Name = "pickerNacionalidad">
+    <!--Aquí puedes agregar opciones-->
+    <Picker.ItemsSource>
+    <x:Array Type = "{x:Type x:String}">
+    <x:String>Española< / x:String>
+    <x:String>Mexicana< / x:String>
+    <x:String>Argentina< / x:String>
+    
+     <Picker Title = "Nivel de Inglés" x:Name = "pickerNivelIngles">
+    <Picker.ItemsSource>
+    <x:Array Type = "{x:Type x:String}">
+    <x:String>Básico< / x:String>
+    <x:String>Intermedio< / x:String>
+    <x:String>Avanzado< / x:String>
+    <x:String>Fluido< / x:String>
+    < / x:Array>
+    < / Picker.ItemsSource>
+    < / Picker>
+<Label Text = "Lenguajes de Programación" Margin = "0,10,0,0" TextColor = "White" / >
+    <ListView x : Name = "listViewLenguajes" SelectionMode = "Multiple">
+
+    <ListView.ItemsSource>
+    <x:Array Type = "{x:Type x:String}">
+    <x:String>C#< / x:String>
+    <x:String>Java< / x:String>
+    <x:String>Python< / x:String>
+
+    <Label Text = "Aptitudes" Margin = "0,10,0,0" TextColor = "White" / >
+    <ListView x : Name = "listViewAptitudes" SelectionMode = "Multiple">
+    <!--Aquí puedes agregar las aptitudes-->
+    <ListView.ItemsSource>
+    <x:Array Type = "{x:Type x:String}">
+    <x:String>Trabajo en Equipo< / x:String>
+    <x:String>Resolución de Problemas< / x:String>
+    <x:String>Comunicación< / x:String>
+    < / x:Array>
+    < / ListView.ItemsSource>
+    < / ListView>
+
+    <Label Text = "Habilidades" Margin = "0,10,0,0" TextColor = "White" / >
+    <ListView x : Name = "listViewHabilidades" SelectionMode = "Multiple">
+    <!--Aquí puedes agregar las habilidades-->
+    <ListView.ItemsSource>
+    <x:Array Type = "{x:Type x:String}">
+    <x:String>Liderazgo< / x:String>
+    <x:String>Organización< / x:String>
+    <x:String>Adaptabilidad< / x:String>
+    < / x:Array>
+    < / ListView.ItemsSource>
+    < / ListView>
+
+    <Label Text = "Perfil" Margin = "0,10,0,0" TextColor = "White" / >
+    <Editor x : Name = "editorPerfil" HeightRequest = "100" / >
+
+
+    <Button Text = "Enviar" Clicked = "Enviar_Clicked" BackgroundColor = "White" TextColor = "RoyalBlue" Margin = "0,20,0,0" / >
+    < / StackLayout>
+
+    < / ContentPage>
